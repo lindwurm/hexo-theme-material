@@ -147,8 +147,8 @@
 
     <!-- Import CSS & jQuery -->
     <% if(theme.materialcdn.use === true) { %>
-        <%- cssLsload({path:(theme.materialcdn.base + '/css/material.min.css'),key:'css/material.min.css'}) %>
-        <%- cssLsload({path:(theme.materialcdn.base + '/css/style.min.css'),key:'css/style.min.css'}) %>
+        <%- cssLsload({path:(theme.materialcdn.base + '/css/material.css'),key:'css/material.css'}) %>
+        <%- cssLsload({path:(theme.materialcdn.base + '/css/style.css'),key:'css/style.css'}) %>
         <% if(theme.scheme === 'Isolation') { %>
             <%- cssLsload({path:(theme.materialcdn.base + '/css/fontawesome.min.css'),key:'css/fontawesome.min.css'}) %>
         <% } %>
@@ -158,8 +158,8 @@
         <%- partial('_partial/config_css') %>
         <%- jsLsload({path:(theme.materialcdn.base + '/js/jquery.min.js'),key:'js/jquery.min.js'}) %>
     <%}else{%>
-        <%- cssLsload('css/material.min.css') %>
-        <%- cssLsload('css/style.min.css') %>
+        <%- cssLsload('css/material.css') %>
+        <%- cssLsload('css/style.css') %>
         <% if(theme.scheme === 'Isolation') { %>
             <%- cssLsload('/css/fontawesome.min.css') %>
         <% } %>
@@ -169,7 +169,7 @@
         <%- partial('_partial/config_css') %>
         <%- jsLsload('js/jquery.min.js') %>
     <%}%>
-    
+
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Analytics -->
@@ -181,4 +181,6 @@
             <%- site.data.head[i] %>
         <% } %>
     <% } %>
+    <link href="https://maud.io/css/koruri.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 </head>
